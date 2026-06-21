@@ -7,7 +7,7 @@ import SettingsPage from './pages/SettingsPage'
 import CartPage from './pages/CartPage'
 import CheckoutPage from './pages/CheckoutPage'
 import OrderConfirmationPage from './pages/OrderConfirmationPage'
-import MarketplacePage from './pages/MarketplacePage'
+import { Navigate } from 'react-router-dom'
 import AccessoriesListingPage from './pages/AccessoriesListingPage'
 import AccessoryDetailPage from './pages/AccessoryDetailPage'
 import TravelListingPage from './pages/TravelListingPage'
@@ -21,8 +21,8 @@ const App: React.FC = () => (
       {/* Home */}
       <Route path="/" element={<HomePage />} />
 
-      {/* Marketplace flows */}
-      <Route path="/marketplace" element={<MarketplacePage />} />
+      {/* Marketplace — redirects to Home (Frame 885 IS the home feed) */}
+      <Route path="/marketplace" element={<Navigate to="/" replace />} />
       <Route path="/marketplace/accessories" element={<AccessoriesListingPage />} />
       <Route path="/marketplace/accessories/:id" element={<AccessoryDetailPage />} />
       <Route path="/marketplace/travel" element={<TravelListingPage />} />
