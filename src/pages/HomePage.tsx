@@ -1,27 +1,15 @@
 import React from 'react'
 import SiteNavbar from '../components/SiteNavbar'
 import SiteFooter from '../components/SiteFooter'
-import Hero from '../components/Hero'
-import CategorySection from '../components/CategorySection'
-import BestSellingAccessories from '../components/BestSellingAccessories'
-import BestSellingTravel from '../components/BestSellingTravel'
-import RestaurantDeals from '../components/RestaurantDeals'
-import ProtectYourRide from '../components/ProtectYourRide'
-import StatsBar from '../components/StatsBar'
-import RideFurther from '../components/RideFurther'
 
 const HomePage: React.FC = () => (
-  <div className="min-h-screen bg-[#111111] flex flex-col">
+  <div className="min-h-screen bg-[#f5f5f5] flex flex-col">
     <SiteNavbar />
-    <main className="flex-1">
-      <Hero />
-      <CategorySection />
-      <BestSellingAccessories />
-      <BestSellingTravel />
-      <RestaurantDeals />
-      <ProtectYourRide />
-      <StatsBar />
-      <RideFurther />
+    <main className="flex-1 flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-[#111] font-bold text-3xl mb-3">Home</h1>
+        <p className="text-gray-500 text-sm">Coming soon</p>
+      </div>
     </main>
     <SiteFooter />
   </div>
